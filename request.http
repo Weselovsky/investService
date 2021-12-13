@@ -1,0 +1,45 @@
+###
+GET http://localhost:8080/papers/getAll
+
+###  @RequestParam (не реализован)
+GET http://localhost:8080/papers/getById?id=1
+
+### @PathVariable
+GET http://localhost:8080/papers/getById/5
+
+###
+POST http://localhost:8080/papers/save
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "AMD",
+  "type": "STOCK",
+  "ticker": "AM",
+  "price": 569,
+  "qty": 15,
+  "profit": 52,
+  "sector": "It"
+}
+
+###
+POST http://localhost:8080/papers/removeById/9
+
+### @RequestParam (не реализован)
+POST http://localhost:8080/papers/removeById?id=1
+
+###
+GET http://localhost:8080/papers/getByName/Intel
+
+###
+GET http://localhost:8080/papers/getByTicker/AAPL
+
+###
+POST http://localhost:8080/sales/register
+Content-Type: application/json
+
+{
+"paperId" : 1,
+"price":15960,
+"qty":2
+}
