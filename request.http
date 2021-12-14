@@ -39,7 +39,8 @@ POST http://localhost:8080/sales/register
 Content-Type: application/json
 
 {
-"paperId" : 1,
-"price":15960,
-"qty":2
+  "paperId": 1,
+  "price": 15960,
+  "qty": 1,
+  "type": "buy"
 }

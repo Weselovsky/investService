@@ -12,5 +12,5 @@ public class SalePaperModel {
     private String name;
     private int price;
     private int qty;
-    private String type;
+
 }

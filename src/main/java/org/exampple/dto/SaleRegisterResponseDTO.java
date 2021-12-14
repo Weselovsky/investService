@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class SaleRegisterResponseDTO {
     private Sale sale;
+
     @NoArgsConstructor
     @AllArgsConstructor
     @Data
@@ -18,6 +19,8 @@ public class SaleRegisterResponseDTO {
         private String name;
         private int price;
         private int qty;
+
+
     }
 
 }

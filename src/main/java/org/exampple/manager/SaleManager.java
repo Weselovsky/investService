@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
+import java.util.Objects;
 
 @Component
 @RequiredArgsConstructor
@@ -31,7 +32,7 @@ public class SaleManager {
             final SalePaperModel item = template.queryForObject(
                     // language=PostgreSQL
                     """
-                            SELECT id, name, price, qty, type
+                            SELECT id, name, price, qty
                             FROM papers
                             WHERE id = :id AND removed = FALSE
                             """,
@@ -85,11 +86,6 @@ public class SaleManager {
                 }
             }
 
-
-
-
-
-
             final SaleModel sale = template.queryForObject(
                     // language=PostgreSQL
                     """
@@ -101,7 +97,9 @@ public class SaleManager {
                             "paper_id", requestDTO.getPaperId(),
                             "name", item.getName(),
                             "price", requestDTO.getPrice(),
-                            "qty", requestDTO.getQty()
+                            "qty", requestDTO.getQty(),
+                            "type", requestDTO.getType()
+
                     ),
                     saleRowMapper
             );
@@ -112,6 +110,7 @@ public class SaleManager {
                     sale.getName(),
                     sale.getPrice(),
                     sale.getQty()
+
             ));
 
             return responseDTO;
