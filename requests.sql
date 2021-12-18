@@ -17,3 +17,13 @@ FROM papers
 WHERE name = 'Apple'
 RETURNING name, type, ticker, price, profit, sector
 ;
+
+SELECT name, price, qty, type
+FROM sales
+ORDER BY type
+;
+
+SELECT paper_id, type, name, price, qty
+FROM sales
+WHERE type = 'buy'
+;

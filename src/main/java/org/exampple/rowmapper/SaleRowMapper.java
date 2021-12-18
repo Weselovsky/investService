@@ -17,7 +17,8 @@ public class SaleRowMapper implements RowMapper<SaleModel> {
                 rs.getLong("paper_id"),
                 rs.getString("name"),
                 rs.getInt("price"),
-                rs.getInt("qty")
+                rs.getInt("qty"),
+                rs.getString("type")
         );
     }
 }

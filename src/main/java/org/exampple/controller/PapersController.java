@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.*;
 public class PapersController {
     private final PapersManager manager;
 
-
-
     @GetMapping("/getById/{id}")
     public PaperGetByIdResponseDTO getById(@PathVariable long id){
 

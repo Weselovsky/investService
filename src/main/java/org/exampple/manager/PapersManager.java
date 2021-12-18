@@ -50,10 +50,6 @@ public class PapersManager {
     }
 
 
-
-
-
-
     public PaperGetByIdResponseDTO getById(long id) {
         final PaperModel item = template.queryForObject(
                 // language=PostgreSQL
@@ -200,14 +196,13 @@ public class PapersManager {
                 item.getType(),
                 item.getTicker(),
                 item.getPrice(),
-                item. getQty(),
+                item.getQty(),
                 item.getProfit(),
                 item.getSector(),
                 item.getImage()
         ));
         return responseDTO;
     }
-
 
 
 }
