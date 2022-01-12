@@ -1,8 +1,8 @@
 package org.exampple.manager;
 
 import lombok.RequiredArgsConstructor;
-import org.exampple.Model.SaleModel;
-import org.exampple.Model.SalePaperModel;
+import org.exampple.model.SaleModel;
+import org.exampple.model.SalePaperModel;
 import org.exampple.dto.SaleRegisterRequestDTO;
 import org.exampple.dto.SaleRegisterResponseDTO;
 import org.exampple.exception.PaperNoFoundException;
@@ -123,4 +123,26 @@ public class SaleManager {
 
 
     }
+
+//    public StatGetByTypeResponseDTO getByType(String type) {
+//        final SaleModel item = template.queryForObject(
+//                // language=PostgreSQL
+//                """
+//SELECT id, paper_id, name, price, qty, type
+//FROM sales
+//WHERE type = :type AND removed = FALSE
+//""",
+//                Map.of("type", type),
+//                saleRowMapper
+//        );
+//        final StatGetByTypeResponseDTO responseDTO = new StatGetByTypeResponseDTO(new StatGetByTypeResponseDTO(
+//                item.getId(),
+//                item.getPaper_id(),
+//                item.getName(),
+//                item.getPrice(),
+//                item.getQty(),
+//                item.getType()
+//        ));
+//        return responseDTO;
+//    }
 }

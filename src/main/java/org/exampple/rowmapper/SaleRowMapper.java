@@ -1,6 +1,6 @@
 package org.exampple.rowmapper;
 
-import org.exampple.Model.SaleModel;
+import org.exampple.model.SaleModel;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

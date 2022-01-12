@@ -1,7 +1,7 @@
 package org.exampple.manager;
 
 import lombok.RequiredArgsConstructor;
-import org.exampple.Model.PaperModel;
+import org.exampple.model.PaperModel;
 import org.exampple.dto.*;
 import org.exampple.exception.PaperNoFoundException;
 import org.exampple.rowmapper.PaperRowMapper;

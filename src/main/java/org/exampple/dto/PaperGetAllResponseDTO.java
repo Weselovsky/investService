@@ -3,7 +3,6 @@ package org.exampple.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.exampple.Data.Paper;
 
 import java.util.List;
 

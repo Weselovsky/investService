@@ -29,7 +29,7 @@ POST http://localhost:8080/papers/removeById/9
 POST http://localhost:8080/papers/removeById?id=1
 
 ###
-GET http://localhost:8080/papers/getByName/Intel
+GET http://localhost:8080/papers/getByName/Apple
 
 ###
 GET http://localhost:8080/papers/getByTicker/AAPL
@@ -42,9 +42,9 @@ Content-Type: application/json
   "paperId": 1,
   "price": 15960,
   "qty": 3,
-  "type": "sale"
+  "type": "buy"
 }
 
-###
-GET http://localhost:8080/sales/getBuy/type
+
+
 
